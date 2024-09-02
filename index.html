@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YSIARA COOKIES</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+            background-image: url("wallpaper.jpg"); /* Set your background image here */
+            background-size: cover; /* Cover the entire background */
+            background-position: center; /* Center the background image */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .subheader-text {
+            font-size: 1.2rem;
+            color: #863932;
+            margin-bottom: -20px;
+            text-align: center;
+            opacity: 0.9;
+        }
+
+        header {
+            width: 100%;
+            text-align: center;
+            background: linear-gradient(135deg, #f5af19, #f12711);
+            padding: 15px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-radius: 0 0 20px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .title {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.5rem;
+            color: #fff;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 12px rgba(0, 0, 0, 0.4);
+            margin: 0;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 90%;
+            max-width: 350px;
+            overflow: hidden;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            margin-top: 120px;
+        }
+
+        .carousel-slide {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .photocard {
+            min-width: 350px;
+            height: 350px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .photocard img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+            transition: transform 0.4s ease;
+        }
+
+        .photocard:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 35px rgba(0, 0, 0, 0.3);
+        }
+
+        .photocard:hover img {
+            transform: scale(1.15);
+        }
+
+        .photocard .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 60px;
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+            color: white;
+            padding: 10px;
+            box-sizing: border-box;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: transform 0.4s ease, opacity 0.4s ease;
+        }
+
+        .photocard:hover .overlay {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            color: white;
+            font-weight: bold;
+            font-size: 22px;
+            transition: 0.4s ease;
+            border-radius: 50%;
+            user-select: none;
+            background-color: rgba(0, 0, 0, 0.7);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0.8;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 1);
+            transform: scale(1.2);
+        }
+
+        .contact-section {
+            margin-top: 50px;
+            text-align: center;
+            background-color: #fff;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+            width: 90%;
+            max-width: 300px;
+        }
+
+        .contact-section h2 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 2rem;
+            color: #f12711;
+            margin: 0;
+        }
+
+        .contact-info {
+            font-size: 1rem;
+            color: #333;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="subheader-text">5k for 1 pcs</div>
+    
+    <header>
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo"> <!-- Logo added -->
+        </div>
+        <div class="title">Ysiara CoOkies</div>
+    </header>
+
+    <div class="carousel-container">
+        <div class="carousel-slide">
+            <div class="photocard">
+                <img src="4.jpg" alt="Cookies Coklat 1">
+                <div class="overlay">cookies coklat</div>
+            </div>
+            <div class="photocard">
+                <img src="3.jpg" alt="Cookies Coklat 2">
+                <div class="overlay">cookies coklat</div>
+            </div>
+            <div class="photocard">
+                <img src="2.jpg" alt="Cookies Coklat & Keju">
+                <div class="overlay">cookies coklat & keju</div>
+            </div>
+            <div class="photocard">
+                <img src="1.jpg" alt="Cookies Coklat 3">
+                <div class="overlay">cookies coklat</div>
+            </div>
+        </div>
+        <a class="prev" onclick="moveSlide(-1)">&#10094;</a>
+        <a class="next" onclick="moveSlide(1)">&#10095;</a>
+    </div>
+
+    <div class="contact-section">
+        <h2>Contact</h2>
+        <p class="contact-info">Whatsapp: <strong>+62 123 456 789</strong></p>
+    </div>
+
+    <script>
+        let currentSlide = 0;
+
+        function moveSlide(n) {
+            const slides = document.querySelector('.carousel-slide');
+            const totalSlides = slides.children.length;
+            const slideWidth = slides.children[0].offsetWidth;
+
+            currentSlide = (currentSlide + n + totalSlides) % totalSlides;
+            slides.style.transform = `translateX(${-currentSlide * slideWidth}px)`;
+        }
+    </script>
+</body>
+</html>
